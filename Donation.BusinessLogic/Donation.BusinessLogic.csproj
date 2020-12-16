@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Donation.Domain\Donation.Domain.csproj" />
+    <ProjectReference Include="..\Donation.DataAccess.Interface\Donation.DataAccess.Interface.csproj" />
+    <ProjectReference Include="..\Donation.BusinessLogic.Interface\Donation.BusinessLogic.Interface.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Moq" Version="4.14.5" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>

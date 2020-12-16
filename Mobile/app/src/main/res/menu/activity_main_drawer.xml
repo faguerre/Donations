@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_homeFragment"
+            android:icon="@drawable/home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/login"
+            android:title="@string/btnLogin" />
+        <item
+            android:id="@+id/nav_editInfo"
+            android:icon="@drawable/editinfo"
+            android:title="@string/btnEdit" />
+        <item
+            android:id="@+id/donationFragment"
+            android:icon="@drawable/donations"
+            android:title="@string/btnDoantion" />
+        <item
+            android:id="@+id/donationsViewFragment"
+            android:icon="@drawable/view_donation"
+            android:title="@string/menu_donation" />
+        <item
+            android:id="@+id/userDonationsViewFragment"
+            android:icon="@drawable/view_donation"
+            android:title="Ver mis donaciones" />
+        <item
+            android:id="@+id/viewConfirmedDonationsFragment"
+            android:icon="@drawable/view_donation"
+            android:title="Mis donaciones confirmadas" />
+
+        <item
+            android:id="@+id/nav_eventViewFragment"
+            android:icon="@drawable/viewevent"
+            android:title="@string/menu_viewevent" />
+
+        <item
+            android:id="@+id/createEventFragment"
+            android:icon="@drawable/event"
+            android:title="@string/menu_event" />
+
+        <item
+            android:id="@+id/tagFragment"
+            android:icon="@drawable/tags_icon"
+            android:title="@string/menu_tag" />
+        <item
+            android:id="@+id/geofencingMapFragment"
+            android:icon="@drawable/geofencing"
+            android:title="@string/menu_geofencing" />
+        <item
+            android:id="@+id/donationUserTagFragment"
+            android:icon="@drawable/tags_icon"
+            android:title="@string/menu_donationTags" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="@string/btnLogout" />
+
+    </group>
+</menu>

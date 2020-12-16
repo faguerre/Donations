@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_homeFragment">
+
+    <fragment
+        android:id="@+id/nav_locationMapFragment"
+        android:name="com.donation.LocationMapFragment"
+        tools:layout="@layout/fragment_location_map">
+        <action
+            android:id="@+id/action_nav_locationMapFragment_to_donationFragment"
+            app:destination="@id/donationFragment"
+            app:popUpTo="@+id/donationFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_editInfo"
+        android:name="com.donation.user.editInfoFragment"
+        android:label="@string/btnEdit"
+        tools:layout="@layout/fragment_edit_info" />
+
+    <fragment
+        android:id="@+id/nav_NewUser"
+        android:name="com.donation.user.NewUserFragment"
+        android:label="Registro de usuario"
+        tools:layout="@layout/fragment_new_user" >
+        <action
+            android:id="@+id/action_nav_NewUser_to_nav_homeFragment"
+            app:popExitAnim="@id/nav_homeFragment"
+
+            app:destination="@id/nav_homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.donation.login.LoginFragment"
+        android:label="@string/btnLogin"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_nav_login_to_nav_NewUser"
+            app:destination="@id/nav_NewUser" />
+        <action
+            android:id="@+id/action_nav_login_to_initialFragment"
+            app:destination="@id/initialFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.donation.login.LogoutFragment"
+        android:label="@string/btnLogout"
+        tools:layout="@layout/fragment_logout">
+        <action
+            android:id="@+id/action_nav_logout_to_nav_login"
+            app:destination="@id/nav_login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/initialFragment"
+        android:name="com.donation.InitialFragment"
+        android:label=""
+        tools:layout="@layout/fragment_initial">
+        <action
+            android:id="@+id/action_initialFragment_to_nav_editInfo"
+            app:destination="@id/nav_editInfo" />
+        <action
+            android:id="@+id/action_initialFragment_to_nav_login"
+            app:destination="@id/nav_login" />
+        <action
+            android:id="@+id/action_initialFragment_to_nav_logout"
+            app:destination="@id/nav_logout" />
+        <action
+            android:id="@+id/action_initialFragment_to_donationsViewFragment"
+            app:destination="@id/donationsViewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/donationsViewFragment"
+        android:name="com.donation.donation.DonationsViewFragment"
+        android:label="Donaciones activas"
+        tools:layout="@layout/fragment_donations_view">
+        <action
+            android:id="@+id/action_donationsViewFragment_to_donationDetailFragment"
+            app:destination="@id/donationDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_homeFragment"
+        android:name="com.donation.ui.home.HomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/donationFragment"
+        android:name="com.donation.DonationFragment"
+        tools:layout="@layout/fragment_donation">
+        <argument
+            android:name="AddressArgsModel"
+            app:argType="com.donation.model.AddressModel" />
+        <action
+            android:id="@+id/action_donationFragment_to_nav_locationMapFragment"
+            app:destination="@id/nav_locationMapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/donationDetailFragment"
+        android:name="com.donation.DonationDetailFragment"
+        tools:layout="@layout/fragment_donation_detail" />
+
+    <fragment
+        android:id="@+id/createEventFragment"
+        android:name="com.donation.donationEvent.CreateEventFragment"
+        android:label="@string/menu_event"
+        tools:layout="@layout/fragment_create_event">
+        <action
+            android:id="@+id/action_createEventFragment_to_addCentersFragment"
+            app:destination="@id/addCentersFragment" />
+        <argument
+            android:name="CentersAddresses"
+            app:argType="com.donation.model.CenterAddressModel"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_createEventFragment_to_eventConfirmation"
+            app:destination="@id/eventconfirmation" />
+        <action
+            android:id="@+id/action_createEventFragment_to_nav_homeFragment"
+            app:destination="@id/nav_homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_eventViewFragment"
+        android:name="com.donation.donationEvent.EventViewFragment"
+        android:label="@string/menu_viewevent"
+        tools:layout="@layout/fragment_event_view">
+        <action
+            android:id="@+id/action_nav_eventViewFragment_to_donateToEvent"
+            app:destination="@id/donateToEvent"
+            app:popUpTo="@+id/donateToEvent"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_acercade"
+        android:name="com.donation.AcercaDe"
+        android:label=""
+        tools:layout="@layout/fragment_acerca_de" />
+
+    <fragment
+        android:id="@+id/addCentersFragment"
+        android:name="com.donation.donationEvent.AddCentersFragment"
+        android:label="@string/selectCenters"
+        tools:layout="@layout/fragment_add_centers">
+        <action
+            android:id="@+id/action_addCentersFragment_to_createEventFragment"
+            app:destination="@id/createEventFragment"
+            app:popUpTo="@+id/createEventFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventconfirmation"
+        android:name="com.donation.donationEvent.EventConfirmation"
+        android:label=""
+        tools:layout="@layout/fragment_event_confirmation">
+        <action
+            android:id="@+id/action_eventConfirmation_to_nav_homeFragment"
+            app:destination="@id/nav_homeFragment" />
+        <argument
+            android:name="eventconfirmationdata"
+            app:argType="com.donation.model.out.DonationEventModelOut"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/donateToEvent"
+        android:name="com.donation.donationEvent.DonateToEvent"
+        android:label=""
+        tools:layout="@layout/fragment_donate_to_event">
+        <argument
+            android:name="eventToDonate"
+            app:argType="com.donation.model.in.DonationEventModelIn"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_donateToEvent_to_nav_homeFragment"
+            app:destination="@id/nav_homeFragment"
+            app:popUpTo="@+id/nav_homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tagFragment"
+        android:name="com.donation.tag.TagFragment"
+        android:label="@string/favouriteTags"
+        tools:layout="@layout/fragment_tag" />
+    <fragment
+        android:id="@+id/donationUserTagFragment"
+        android:name="com.donation.donation.DonationUserTagFragment"
+        android:label=""
+        tools:layout="@layout/fragment_donation_user_tag" />
+
+    <fragment
+        android:id="@+id/geofencingMapFragment"
+        android:name="com.donation.geofencing.GeofencingMapFragment"
+        android:label="@string/menu_geofencing"
+        tools:layout="@layout/fragment_geofencing_map" />
+
+    <fragment
+        android:id="@+id/userDonationsViewFragment"
+        android:name="com.donation.UserDonationViewFragment"
+        tools:layout="@layout/fragment_user_donation_view">
+        <action
+            android:id="@+id/action_userDonationViewFragment_to_donationDetailFragment"
+            app:destination="@id/donationDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewConfirmedDonationsFragment"
+        android:name="com.donation.ViewConfirmedDonationsFragment"
+        android:label="fragment_view_confirmed_donations"
+        tools:layout="@layout/fragment_view_confirmed_donations" />
+</navigation>

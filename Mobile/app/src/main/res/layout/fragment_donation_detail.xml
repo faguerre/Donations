@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DonationDetailFragment"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/id_viewPagerDetailDonation"
+        android:layout_width="match_parent"
+        android:layout_height="336dp"></androidx.viewpager.widget.ViewPager>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="15dp">
+
+            <TextView
+                android:text="Nombre:"
+                android:textStyle="bold"
+                android:id="@+id/txtLabelDetailDonationName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Donation Name" />
+            <TextView
+                android:text="Nombre"
+                android:id="@+id/txtDetailDonationName"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:hint="Donation Name" />
+            <TextView
+                android:text="Descripción:"
+                android:id="@+id/txtLabelDetailDonationDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Donation Name"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="Descripción"
+                android:id="@+id/txtDetailDonationDescription"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+            <TextView
+                android:text="Creador:"
+                android:textStyle="bold"
+                android:id="@+id/txtLabelDetailDonationCreator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Donation Name" />
+            <TextView
+                android:text="Creador"
+                android:id="@+id/txtUserCreator"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Creator Name" />
+            <TextView
+                android:text="Confirmed by:"
+                android:textStyle="bold"
+                android:id="@+id/txtLabelDetailDonationConfirmed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Donation Name" />
+            <TextView
+                android:text="Owner"
+                android:id="@+id/txtUserConfirmed"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Owner Name" />
+            <TextView
+                android:text="Estado:"
+                android:textStyle="bold"
+                android:id="@+id/txtLabelDetailDonationNameStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Donation Name" />
+
+            <TextView
+                android:text="Estado"
+                android:id="@+id/txtDonationStatus"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:hint="Donation Status"  />
+
+            <Button
+                android:layout_marginTop="15dp"
+                android:id="@+id/btn_ExtendDonation"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#9F9DA1"
+                android:text="EXTENDER PUBLICACION"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/btn_DeleteDonation"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#9F9DA1"
+                android:text="DELETE"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:layout_marginTop="13dp"
+                android:textStyle="bold"
+                android:text="See distance in Google Maps"
+                android:id="@+id/txtLabelDetailDonationDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_marginTop="8dp"
+                android:id="@+id/btn_DetailDonationGoogleMap"
+                android:layout_width="381dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#9F9DA1"
+                android:text="Abrir en Google Map"
+                android:textColor="@color/colorPrimaryDark" />
+            <Button
+                android:id="@+id/btn_confirmDetailDonation"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="#9F9DA1"
+                android:text="¡Lo quiero!"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_margin="15dp"/>
+            <TextView
+                android:layout_margin="15dp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

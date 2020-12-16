@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".donationEvent.AddCentersFragment">
+
+    <fragment
+        android:id="@+id/addCenter_google_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchEventMap"
+            android:queryHint="Ingrese dirección..."
+            android:iconifiedByDefault="false"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            android:background="@color/background">
+        </SearchView>
+        <Button
+            android:id="@+id/btnclearMarkers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eliminar marcas" />
+
+        <Button
+            android:id="@+id/btnBackToEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volver" />
+    </LinearLayout>
+
+
+</RelativeLayout>

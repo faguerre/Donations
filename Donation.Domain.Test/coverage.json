@@ -1,0 +1,756 @@
+{
+  "Donation.Domain.dll": {
+    "C:\\Henry\\ORT\\ISP\\obligatorio\\Donation.Domain\\Address.cs": {
+      "Donation.Domain.Address": {
+        "System.Int32 Donation.Domain.Address::get_Id()": {
+          "Lines": {
+            "7": 8
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.Address::get_Name()": {
+          "Lines": {
+            "8": 13
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.Address::get_Latitute()": {
+          "Lines": {
+            "9": 13
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.Address::get_Longitute()": {
+          "Lines": {
+            "10": 12
+          },
+          "Branches": []
+        },
+        "System.Void Donation.Domain.Address::.ctor()": {
+          "Lines": {
+            "11": 20,
+            "12": 20,
+            "13": 20
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Henry\\ORT\\ISP\\obligatorio\\Donation.Domain\\Center.cs": {
+      "Donation.Domain.Center": {
+        "System.Int32 Donation.Domain.Center::get_Id()": {
+          "Lines": {
+            "7": 8
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.Center::get_Name()": {
+          "Lines": {
+            "8": 8
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.Center::get_Address()": {
+          "Lines": {
+            "9": 7
+          },
+          "Branches": []
+        },
+        "System.Void Donation.Domain.Center::.ctor()": {
+          "Lines": {
+            "10": 18
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Henry\\ORT\\ISP\\obligatorio\\Donation.Domain\\Donation.cs": {
+      "Donation.Domain.Donation": {
+        "System.Int32 Donation.Domain.Donation::get_Id()": {
+          "Lines": {
+            "8": 11
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.Donation::get_Name()": {
+          "Lines": {
+            "9": 10
+          },
+          "Branches": []
+        },
+        "Donation.Domain.User Donation.Domain.Donation::get_CreatorUser()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "Donation.Domain.User Donation.Domain.Donation::get_ConfirmedUser()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "Donation.Domain.Address Donation.Domain.Donation::get_Address()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.Donation::get_Description()": {
+          "Lines": {
+            "13": 11
+          },
+          "Branches": []
+        },
+        "Donation.Domain.State Donation.Domain.Donation::get_State()": {
+          "Lines": {
+            "14": 20
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<Donation.Domain.File> Donation.Domain.Donation::get_Files()": {
+          "Lines": {
+            "15": 19
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<Donation.Domain.DonationTag> Donation.Domain.Donation::get_DonationTag()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Void Donation.Domain.Donation::.ctor()": {
+          "Lines": {
+            "17": 9,
+            "18": 9,
+            "19": 9,
+            "20": 9,
+            "21": 9,
+            "22": 9
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Henry\\ORT\\ISP\\obligatorio\\Donation.Domain\\DonationEvent.cs": {
+      "Donation.Domain.DonationEvent": {
+        "System.Int32 Donation.Domain.DonationEvent::get_Id()": {
+          "Lines": {
+            "9": 41
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.DonationEvent::get_Name()": {
+          "Lines": {
+            "10": 57
+          },
+          "Branches": []
+        },
+        "System.DateTime Donation.Domain.DonationEvent::get_ValidityFrom()": {
+          "Lines": {
+            "11": 102
+          },
+          "Branches": []
+        },
+        "System.DateTime Donation.Domain.DonationEvent::get_ValidityUntil()": {
+          "Lines": {
+            "12": 60
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.DonationEvent::get_Description()": {
+          "Lines": {
+            "13": 54
+          },
+          "Branches": []
+        },
+        "System.Boolean Donation.Domain.DonationEvent::get_Active()": {
+          "Lines": {
+            "14": 49
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.DonationEvent::get_Email()": {
+          "Lines": {
+            "15": 63
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.DonationEvent::get_Phone()": {
+          "Lines": {
+            "16": 50
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<Donation.Domain.Address> Donation.Domain.DonationEvent::get_Centers()": {
+          "Lines": {
+            "17": 52
+          },
+          "Branches": []
+        },
+        "Donation.Domain.User Donation.Domain.DonationEvent::get_CreatorUser()": {
+          "Lines": {
+            "18": 50
+          },
+          "Branches": []
+        },
+        "System.Boolean Donation.Domain.DonationEvent::isEmailValid()": {
+          "Lines": {
+            "26": 10,
+            "28": 10,
+            "29": 10,
+            "30": 10,
+            "31": 10,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "37": 10
+          },
+          "Branches": []
+        },
+        "System.Boolean Donation.Domain.DonationEvent::isPhoneValid()": {
+          "Lines": {
+            "39": 9,
+            "41": 9,
+            "42": 9,
+            "43": 9,
+            "44": 9,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "50": 9
+          },
+          "Branches": []
+        },
+        "System.Boolean Donation.Domain.DonationEvent::isUserValid()": {
+          "Lines": {
+            "52": 8,
+            "54": 8,
+            "55": 8
+          },
+          "Branches": []
+        },
+        "System.Boolean Donation.Domain.DonationEvent::IsValid()": {
+          "Lines": {
+            "58": 13,
+            "60": 13,
+            "61": 13,
+            "62": 13,
+            "63": 13,
+            "64": 13,
+            "65": 13,
+            "66": 13,
+            "67": 13,
+            "68": 13,
+            "69": 13
+          },
+          "Branches": [
+            {
+              "Line": 60,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 12
+            },
+            {
+              "Line": 60,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 11
+            },
+            {
+              "Line": 60,
+              "Offset": 38,
+              "EndOffset": 40,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 10
+            },
+            {
+              "Line": 60,
+              "Offset": 46,
+              "EndOffset": 48,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 9
+            },
+            {
+              "Line": 60,
+              "Offset": 54,
+              "EndOffset": 56,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 8
+            },
+            {
+              "Line": 60,
+              "Offset": 62,
+              "EndOffset": 64,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 7
+            },
+            {
+              "Line": 60,
+              "Offset": 79,
+              "EndOffset": 81,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 7
+            },
+            {
+              "Line": 60,
+              "Offset": 96,
+              "EndOffset": 98,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 7
+            },
+            {
+              "Line": 60,
+              "Offset": 12,
+              "EndOffset": 123,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6
+            },
+            {
+              "Line": 60,
+              "Offset": 25,
+              "EndOffset": 123,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 6
+            },
+            {
+              "Line": 60,
+              "Offset": 38,
+              "EndOffset": 123,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 6
+            },
+            {
+              "Line": 60,
+              "Offset": 46,
+              "EndOffset": 123,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 6
+            },
+            {
+              "Line": 60,
+              "Offset": 54,
+              "EndOffset": 123,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 6
+            },
+            {
+              "Line": 60,
+              "Offset": 62,
+              "EndOffset": 123,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 6
+            },
+            {
+              "Line": 60,
+              "Offset": 79,
+              "EndOffset": 123,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 6
+            },
+            {
+              "Line": 60,
+              "Offset": 96,
+              "EndOffset": 123,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 6
+            }
+          ]
+        },
+        "System.Boolean Donation.Domain.DonationEvent::IsActive()": {
+          "Lines": {
+            "71": 6,
+            "72": 6,
+            "73": 6,
+            "74": 6,
+            "75": 6,
+            "77": 6
+          },
+          "Branches": [
+            {
+              "Line": 73,
+              "Offset": 13,
+              "EndOffset": 15,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 5
+            },
+            {
+              "Line": 73,
+              "Offset": 27,
+              "EndOffset": 29,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 4
+            },
+            {
+              "Line": 73,
+              "Offset": 13,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 73,
+              "Offset": 27,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Void Donation.Domain.DonationEvent::.ctor()": {
+          "Lines": {
+            "20": 39,
+            "21": 39,
+            "22": 39,
+            "23": 39
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Henry\\ORT\\ISP\\obligatorio\\Donation.Domain\\DonationTag.cs": {
+      "Donation.Domain.DonationTag": {
+        "System.Int32 Donation.Domain.DonationTag::get_DonationId()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Donation.Domain.DonationTag::get_TagId()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "Donation.Domain.Donation Donation.Domain.DonationTag::get_Donation()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "Donation.Domain.Tag Donation.Domain.DonationTag::get_Tag()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Henry\\ORT\\ISP\\obligatorio\\Donation.Domain\\File.cs": {
+      "Donation.Domain.File": {
+        "System.Int32 Donation.Domain.File::get_Id()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.File::get_Name()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.File::get_Size()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Byte[] Donation.Domain.File::get_DataFiles()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Henry\\ORT\\ISP\\obligatorio\\Donation.Domain\\Result\\Result.cs": {
+      "Donation.Domain.Result`1": {
+        "System.String Donation.Domain.Result`1::get_Message()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "T Donation.Domain.Result`1::get_ResultObject()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Void Donation.Domain.Result`1::.ctor()": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Henry\\ORT\\ISP\\obligatorio\\Donation.Domain\\Session.cs": {
+      "Donation.Domain.Session": {
+        "System.Int32 Donation.Domain.Session::get_Id()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "Donation.Domain.User Donation.Domain.Session::get_User()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Guid Donation.Domain.Session::get_Token()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Donation.Domain.Session::get_CreateDate()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Henry\\ORT\\ISP\\obligatorio\\Donation.Domain\\State.cs": {
+      "Donation.Domain.State": {
+        "System.Int32 Donation.Domain.State::get_Id()": {
+          "Lines": {
+            "7": 10
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.State::get_ActualState()": {
+          "Lines": {
+            "8": 33
+          },
+          "Branches": []
+        },
+        "System.DateTime Donation.Domain.State::get_CreationDate()": {
+          "Lines": {
+            "9": 40
+          },
+          "Branches": []
+        },
+        "System.DateTime Donation.Domain.State::get_FinishDate()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Donation.Domain.State::get_WasExtended()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Donation.Domain.State::get_DaysLeft()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Void Donation.Domain.State::UpdateStatus()": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        },
+        "System.Void Donation.Domain.State::UpdateDaysLeft()": {
+          "Lines": {
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0
+          },
+          "Branches": [
+            {
+              "Line": 31,
+              "Offset": 37,
+              "EndOffset": 39,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 37,
+              "EndOffset": 50,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 72,
+              "EndOffset": 74,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 72,
+              "EndOffset": 112,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Donation.Domain.State::.ctor()": {
+          "Lines": {
+            "13": 27,
+            "14": 27,
+            "15": 27,
+            "16": 27,
+            "17": 27,
+            "18": 27,
+            "19": 27,
+            "20": 27
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Henry\\ORT\\ISP\\obligatorio\\Donation.Domain\\Tag.cs": {
+      "Donation.Domain.Tag": {
+        "System.Int32 Donation.Domain.Tag::get_Id()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.Tag::get_Name()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Void Donation.Domain.Tag::.ctor()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Henry\\ORT\\ISP\\obligatorio\\Donation.Domain\\User.cs": {
+      "Donation.Domain.User": {
+        "System.Int32 Donation.Domain.User::get_Id()": {
+          "Lines": {
+            "8": 12
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.User::get_Name()": {
+          "Lines": {
+            "9": 60
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.User::get_Email()": {
+          "Lines": {
+            "10": 16
+          },
+          "Branches": []
+        },
+        "System.String Donation.Domain.User::get_Password()": {
+          "Lines": {
+            "11": 11
+          },
+          "Branches": []
+        },
+        "System.Int32 Donation.Domain.User::get_Phone()": {
+          "Lines": {
+            "12": 11
+          },
+          "Branches": []
+        },
+        "System.Boolean Donation.Domain.User::get_IsExternal()": {
+          "Lines": {
+            "13": 13
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<Donation.Domain.UserTag> Donation.Domain.User::get_userTag()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void Donation.Domain.User::.ctor()": {
+          "Lines": {
+            "15": 180
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Henry\\ORT\\ISP\\obligatorio\\Donation.Domain\\UserTag.cs": {
+      "Donation.Domain.UserTag": {
+        "System.Int32 Donation.Domain.UserTag::get_UserId()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Donation.Domain.UserTag::get_TagId()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "Donation.Domain.User Donation.Domain.UserTag::get_User()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "Donation.Domain.Tag Donation.Domain.UserTag::get_Tag()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

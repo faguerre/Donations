@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tag.TagFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/checkable_tags_list"
+        android:layout_width="match_parent"
+        android:layout_height="624dp"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/ButtonAddTags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base"
+        android:enabled="true"
+        android:text="@string/addTags"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_gravity="bottom|right"/>
+
+</FrameLayout>

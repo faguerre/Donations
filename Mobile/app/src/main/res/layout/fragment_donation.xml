@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:src="@drawable/logo" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/idContenedor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/txtDonationName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="0dp"
+                android:hint="@string/prompt_DonationName"
+                android:selectAllOnFocus="true"
+                android:layout_margin="10dp"/>
+            <EditText
+                android:id="@+id/txtDonationDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="0dp"
+                android:baselineAligned="false"
+                android:hint="@string/prompt_DonationDescription"
+                android:imeOptions="actionDone"
+                android:selectAllOnFocus="true" />
+
+            <Button
+                android:layout_margin="30dp"
+                android:id="@+id/btn_DirectionMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buscar direccion" />
+
+            <TextView
+                android:id="@+id/textViewTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Categoria relacionada"
+                android:textStyle="bold"
+                android:horizontalSpacing="5dp"
+                android:verticalSpacing="5dp"
+                android:layout_margin="15dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/checkable_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="5dp"
+                android:numColumns="3"
+                android:verticalSpacing="5dp"
+                android:layout_margin="15dp"
+                android:orientation="vertical"
+               />
+
+            <Button
+                android:layout_margin="30dp"
+                android:id="@+id/ButtonLoadImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cargar Imagen" />
+
+            <GridView
+                android:id="@+id/gvImagenes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnWidth="100dp"
+                android:horizontalSpacing="5dp"
+                android:numColumns="3"
+                android:verticalSpacing="5dp"
+                android:layout_margin="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Button
+                android:id="@+id/ButtonConfirmDonation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/base"
+                android:enabled="true"
+                android:text="@string/confirm"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center"
+                />
+            <Button
+                android:id="@+id/ButtonExitDonation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Salir" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
