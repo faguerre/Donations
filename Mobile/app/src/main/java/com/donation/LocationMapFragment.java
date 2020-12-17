@@ -19,6 +19,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
+import com.donation.donation.DonationUtils.AddressViewModel;
 import com.donation.model.AddressModel;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -45,9 +46,8 @@ public class LocationMapFragment extends Fragment {
     SupportMapFragment mapFragment;
     LatLng latLng;
     Button buttonConfirm;
-    private SharedViewModel addressModelView;
     private static final int REQUEST_CODE = 101;
-    private PageViewModel viewModel;
+    private AddressViewModel viewModel;
 
     public LocationMapFragment() {
         // Required empty public constructor
@@ -66,7 +66,7 @@ public class LocationMapFragment extends Fragment {
         SetAddressSelectedInMap();
 
 
-        viewModel = new ViewModelProvider(getActivity()).get(PageViewModel.class);
+        viewModel = new ViewModelProvider(getActivity()).get(AddressViewModel.class);
 
         buttonConfirm.setOnClickListener(new View.OnClickListener() {
             @Override

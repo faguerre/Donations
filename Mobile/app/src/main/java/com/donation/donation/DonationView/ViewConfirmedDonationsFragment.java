@@ -1,4 +1,4 @@
-package com.donation;
+package com.donation.donation.DonationView;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -17,11 +17,12 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.donation.R;
 import com.donation.database.LoginDBHandler;
 import com.donation.database.TokenHandler;
-import com.donation.donation.AdapterDonationRB;
-import com.donation.donation.DonationViewModel;
-import com.donation.donation.RecyclerItemClickListener;
+import com.donation.donation.DonationUtils.AdapterDonationRB;
+import com.donation.donation.DonationUtils.DonationViewModel;
+import com.donation.donation.DonationUtils.RecyclerItemClickListener;
 import com.donation.model.in.DonationModelIn;
 import com.donation.retrofit.ApiClient;
 import com.donation.retrofit.ApiServiceDonation;
@@ -36,9 +37,9 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 
-public class UserDonationViewFragment extends Fragment {
+public class ViewConfirmedDonationsFragment extends Fragment {
 
-    public UserDonationViewFragment() {
+    public ViewConfirmedDonationsFragment() {
         // Required empty public constructor
     }
 
@@ -54,9 +55,9 @@ public class UserDonationViewFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_user_donation_view, container, false);
+        final View view = inflater.inflate(R.layout.fragment_view_confirmed_donations, container, false);
         donationViewModel = new ViewModelProvider(getActivity()).get(DonationViewModel.class);
-        recyclerView = view.findViewById(R.id.id_donationsView_recyclerview);
+        recyclerView = view.findViewById(R.id.rv_id_donationsViewConfirmedDonations);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         userLoggedDBHandler = new LoginDBHandler(getContext(), null, null, 1);
         tokenHandler = new TokenHandler(getContext(), null, null, 1);
@@ -85,16 +86,16 @@ public class UserDonationViewFragment extends Fragment {
         ApiServiceDonation donationService = retrofit.create(ApiServiceDonation.class);
         Log.println(Log.INFO, "Donation", new Date().toString());
 
-        String _tokenAvailable = tokenHandler.getUserToken();
-        //si del usuario
-        Call<ArrayList<DonationModelIn>> call = donationService.getAllDonations(tokenHandler.getUserToken(), true, false);
+        //donaciones confirmadas por el usuario
+        Call<ArrayList<DonationModelIn>> call = donationService.getAllDonations(tokenHandler.getUserToken(), true, true);
 
         call.enqueue(new Callback<ArrayList<DonationModelIn>>() {
             @Override
             public void onResponse(Call<ArrayList<DonationModelIn>> call, Response<ArrayList<DonationModelIn>> response) {
                 //Log.println(Log.INFO,"Donation", "Se carga los datos de la lista " + response.body().size());
                 donations = response.body();
-                AdapterDonationRB adapter = new AdapterDonationRB(DonationsAvailables(donations), userLoggedDBHandler.getUser());
+                ArrayList<DonationModelIn> aux = DonationsConfirmedByUser(donations);
+                AdapterDonationRB adapter = new AdapterDonationRB(aux, userLoggedDBHandler.getUser());
                 recyclerView.setAdapter(adapter);
                 adapter.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -108,11 +109,11 @@ public class UserDonationViewFragment extends Fragment {
             public void onFailure(Call<ArrayList<DonationModelIn>> call, Throwable t) {
                 new AlertDialog.Builder(getContext())
                         .setTitle("Ups!")
-                        .setMessage("Ya no tienes donaciones activas")
+                        .setMessage("Aun no tienes donaciones confirmadas. Busca una")
                         .setIcon(getResources().getDrawable(R.drawable.small_logo))
-                        .setPositiveButton("Crear nuevas", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Ver donaciones", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
-                                Navigation.findNavController(view).navigate(R.id.donationFragment);
+                                Navigation.findNavController(view).navigate(R.id.donationsViewFragment);
                             }
                         })
                         .setNegativeButton("Home", new DialogInterface.OnClickListener() {
@@ -126,10 +127,10 @@ public class UserDonationViewFragment extends Fragment {
         });
     }
 
-    private ArrayList<DonationModelIn> DonationsAvailables(List<DonationModelIn> donations) {
+    private ArrayList<DonationModelIn> DonationsConfirmedByUser(List<DonationModelIn> donations) {
         ArrayList<DonationModelIn> _donations = new ArrayList<>();
         for (int i = 0; i < donations.size(); i++) {
-            if (donations.get(i).getConfirmedUser() == null) {
+            if (donations.get(i).getConfirmedUser() != null) {
                 _donations.add(donations.get(i));
             }
         }

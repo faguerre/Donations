@@ -1,4 +1,4 @@
-package com.donation.donation;
+package com.donation.donation.DonationUtils;
 
 import android.content.Context;
 import android.view.GestureDetector;

@@ -1,4 +1,4 @@
-package com.donation;
+package com.donation.donation;
 
 import android.app.AlertDialog;
 import android.content.ClipData;
@@ -23,6 +23,7 @@ import android.widget.Button;
 import android.widget.CheckedTextView;
 import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -35,7 +36,11 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.donation.database.MyDBHandler;
+import com.donation.donation.DonationUtils.AddressViewModel;
+import com.donation.R;
 import com.donation.database.TokenHandler;
+import com.donation.donation.DonationUtils.GridViewAdapter;
 import com.donation.model.AddressModel;
 import com.donation.model.in.TagModelIn;
 import com.donation.model.in.UserModelIn;
@@ -81,6 +86,7 @@ public class DonationFragment extends Fragment {
     UserModelIn userIn;
     EditText txtName;
     EditText txtDescription;
+    TextView txtSearchAddress;
     Retrofit retrofit;
     DonationModelOut modelOut;
     MyDBHandler dbHandler;
@@ -92,7 +98,7 @@ public class DonationFragment extends Fragment {
     String descriptionaux = "";
     View viewAux;
     UserModelIn userModelIn;
-    private PageViewModel viewModel;
+    private AddressViewModel viewModel;
 
     public DonationFragment() {
         retrofit = ApiClient.getClient();
@@ -102,6 +108,7 @@ public class DonationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Retrofit retrofit = ApiClient.getClient();
+
 
         ApiServiceTag tagService = retrofit.create(ApiServiceTag.class);
         Call<ArrayList<TagModelIn>> call = tagService.getAllTags();
@@ -134,13 +141,20 @@ public class DonationFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         recyclerView = view.findViewById(R.id.checkable_tags_list);
         final NavController navigation = Navigation.findNavController(view);
-        viewModel = new ViewModelProvider(getActivity()).get(PageViewModel.class);
+        viewModel = new ViewModelProvider(getActivity()).get(AddressViewModel.class);
         userService = retrofit.create(ApiServiceUser.class);
         serviceSession = retrofit.create(ApiServiceSession.class);
         dbHandler = new MyDBHandler(this.getContext(), null, null, 1);
         tokenHandler = new TokenHandler(getContext(), null, null, 1);
         txtName = view.findViewById(R.id.txtDonationName);
         txtDescription = view.findViewById(R.id.txtDonationDescription);
+        txtSearchAddress = view.findViewById(R.id.txt_searchAddress);
+        if(viewModel.getAddressModel().getValue() == null) {
+            txtSearchAddress.setVisibility(View.GONE);
+        }else{
+            txtSearchAddress.setVisibility(View.VISIBLE);
+            txtSearchAddress.setText(viewModel.getAddressModel().getValue().getName());
+        }
         Button confirmDonation = view.findViewById(R.id.ButtonConfirmDonation);
         Button btnLoadImage = view.findViewById(R.id.ButtonLoadImage);
         Button _btnLoadDirection = view.findViewById(R.id.btn_DirectionMap);

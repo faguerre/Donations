@@ -1,4 +1,4 @@
-package com.donation.donation;
+package com.donation.donation.DonationUtils;
 
 import android.graphics.Color;
 import android.view.LayoutInflater;

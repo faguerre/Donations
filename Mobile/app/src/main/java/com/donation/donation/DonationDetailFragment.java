@@ -1,4 +1,4 @@
-package com.donation;
+package com.donation.donation;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -23,10 +23,11 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 import androidx.viewpager.widget.ViewPager;
 
+import com.donation.R;
 import com.donation.database.LoginDBHandler;
 import com.donation.database.TokenHandler;
-import com.donation.donation.DonationViewModel;
-import com.donation.donation.ImageAdapter;
+import com.donation.donation.DonationUtils.DonationViewModel;
+import com.donation.donation.DonationUtils.ImageAdapter;
 import com.donation.model.in.DonationModelIn;
 import com.donation.model.in.UserModelIn;
 import com.donation.retrofit.ApiClient;
@@ -56,6 +57,7 @@ public class DonationDetailFragment extends Fragment {
     TextView txtLaunchMapLabel;
     TextView txtDonationConfirmedUser;
     TextView txtLabelDetailDonationConfirmed;
+    TextView txtLabelDetailDonationCreator;
     Button btn_ConfirmDonation;
     Button btn_DeleteDonation;
     Button btn_launchMap;
@@ -105,6 +107,7 @@ public class DonationDetailFragment extends Fragment {
         txtDonationCreatorUser = view.findViewById(R.id.txtUserCreator);
         txtDonationConfirmedUser = view.findViewById(R.id.txtUserConfirmed);
         txtLabelDetailDonationConfirmed = view.findViewById(R.id.txtLabelDetailDonationConfirmed);
+        txtLabelDetailDonationCreator = view.findViewById(R.id.txtLabelDetailDonationCreator);
         btn_ConfirmDonation = view.findViewById(R.id.btn_confirmDetailDonation);
         btn_launchMap = view.findViewById(R.id.btn_DetailDonationGoogleMap);
         btn_ExtendDonationTime = view.findViewById(R.id.btn_ExtendDonation);
@@ -253,6 +256,8 @@ public class DonationDetailFragment extends Fragment {
                         txtLaunchMapLabel.setVisibility(View.GONE);
                         txtLabelDetailDonationConfirmed.setVisibility(View.GONE);
                         txtDonationConfirmedUser.setVisibility(View.GONE);
+                        txtLabelDetailDonationCreator.setVisibility(View.GONE);
+                        txtDonationCreatorUser.setVisibility(View.GONE);
                     } else {
                         btn_DeleteDonation.setEnabled(false);
                         btn_DeleteDonation.setVisibility(View.GONE);

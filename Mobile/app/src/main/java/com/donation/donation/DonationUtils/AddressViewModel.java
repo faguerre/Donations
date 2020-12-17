@@ -1,4 +1,4 @@
-package com.donation;
+package com.donation.donation.DonationUtils;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel;
 
 import com.donation.model.AddressModel;
 
-public class PageViewModel extends ViewModel {
+public class AddressViewModel extends ViewModel {
     /**
      * Live Data Instance
      */

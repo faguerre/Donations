@@ -23,93 +23,104 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <EditText
                 android:id="@+id/txtDonationName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="0dp"
+                android:layout_margin="5dp"
                 android:hint="@string/prompt_DonationName"
-                android:selectAllOnFocus="true"
-                android:layout_margin="10dp"/>
+                android:selectAllOnFocus="true" />
+
             <EditText
                 android:id="@+id/txtDonationDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="0dp"
+                android:layout_margin="5dp"
                 android:baselineAligned="false"
                 android:hint="@string/prompt_DonationDescription"
                 android:imeOptions="actionDone"
                 android:selectAllOnFocus="true" />
 
+            <TextView
+                android:id="@+id/lbl_searchAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:horizontalSpacing="5dp"
+                android:text="Direccion de retiro:"
+                android:textStyle="bold"
+                android:verticalSpacing="5dp" />
+
+            <TextView
+                android:id="@+id/txt_searchAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:hint="Direccion de retiro:"
+                android:horizontalSpacing="5dp"
+                android:textStyle="bold"
+                android:verticalSpacing="5dp" />
+
             <Button
-                android:layout_margin="30dp"
                 android:id="@+id/btn_DirectionMap"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:text="Buscar direccion" />
 
             <TextView
                 android:id="@+id/textViewTags"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Categoria relacionada"
-                android:textStyle="bold"
+                android:layout_margin="15dp"
                 android:horizontalSpacing="5dp"
-                android:verticalSpacing="5dp"
-                android:layout_margin="15dp"/>
+                android:text="Categoria asociada:"
+                android:textStyle="bold"
+                android:verticalSpacing="5dp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/checkable_list"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="15dp"
                 android:horizontalSpacing="5dp"
                 android:numColumns="3"
-                android:verticalSpacing="5dp"
-                android:layout_margin="15dp"
                 android:orientation="vertical"
-               />
+                android:verticalSpacing="5dp" />
 
             <Button
-                android:layout_margin="30dp"
                 android:id="@+id/ButtonLoadImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="30dp"
                 android:text="Cargar Imagen" />
 
             <GridView
                 android:id="@+id/gvImagenes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="15dp"
                 android:columnWidth="100dp"
                 android:horizontalSpacing="5dp"
                 android:numColumns="3"
                 android:verticalSpacing="5dp"
-                android:layout_margin="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/ButtonConfirmDonation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
                 android:background="@color/base"
                 android:enabled="true"
                 android:text="@string/confirm"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_gravity="center"
-                />
-            <Button
-                android:id="@+id/ButtonExitDonation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Salir" />
+                android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

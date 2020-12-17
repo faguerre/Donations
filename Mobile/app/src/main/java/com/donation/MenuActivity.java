@@ -88,7 +88,7 @@ public class MenuActivity extends AppCompatActivity {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.initialFragment,
+                //R.id.initialFragment,
                 R.id.nav_login,
                 R.id.nav_editInfo,
                 R.id.donationsViewFragment,

@@ -1,4 +1,4 @@
-package com.donation.donationEvent;
+package com.donation.donation.DonationEvent;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +15,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.donation.R;
+import com.donation.donation.DonationEvent.AdapterDonationEvent;
+//import com.donation.donationEvent.EventViewFragmentDirections;
 import com.donation.model.in.DonationEventModelIn;
 import com.donation.retrofit.ApiClient;
 import com.donation.retrofit.ApiServiceDonationEvent;

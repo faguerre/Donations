@@ -44,8 +44,9 @@
             android:id="@+id/action_nav_login_to_nav_NewUser"
             app:destination="@id/nav_NewUser" />
         <action
-            android:id="@+id/action_nav_login_to_initialFragment"
-            app:destination="@id/initialFragment" />
+            android:id="@+id/action_nav_login_to_nav_homeFragment"
+            app:destination="@id/nav_homeFragment"
+            app:popUpTo="@id/nav_homeFragment" />
     </fragment>
 
     <fragment
@@ -59,27 +60,8 @@
     </fragment>
 
     <fragment
-        android:id="@+id/initialFragment"
-        android:name="com.donation.InitialFragment"
-        android:label=""
-        tools:layout="@layout/fragment_initial">
-        <action
-            android:id="@+id/action_initialFragment_to_nav_editInfo"
-            app:destination="@id/nav_editInfo" />
-        <action
-            android:id="@+id/action_initialFragment_to_nav_login"
-            app:destination="@id/nav_login" />
-        <action
-            android:id="@+id/action_initialFragment_to_nav_logout"
-            app:destination="@id/nav_logout" />
-        <action
-            android:id="@+id/action_initialFragment_to_donationsViewFragment"
-            app:destination="@id/donationsViewFragment" />
-    </fragment>
-
-    <fragment
         android:id="@+id/donationsViewFragment"
-        android:name="com.donation.donation.DonationsViewFragment"
+        android:name="com.donation.donation.DonationView.DonationsViewFragment"
         android:label="Donaciones activas"
         tools:layout="@layout/fragment_donations_view">
         <action
@@ -94,7 +76,7 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/donationFragment"
-        android:name="com.donation.DonationFragment"
+        android:name="com.donation.donation.DonationFragment"
         tools:layout="@layout/fragment_donation">
         <argument
             android:name="AddressArgsModel"
@@ -105,12 +87,12 @@
     </fragment>
     <fragment
         android:id="@+id/donationDetailFragment"
-        android:name="com.donation.DonationDetailFragment"
+        android:name="com.donation.donation.DonationDetailFragment"
         tools:layout="@layout/fragment_donation_detail" />
 
     <fragment
         android:id="@+id/createEventFragment"
-        android:name="com.donation.donationEvent.CreateEventFragment"
+        android:name="com.donation.donation.DonationEvent.CreateEventFragment"
         android:label="@string/menu_event"
         tools:layout="@layout/fragment_create_event">
         <action
@@ -130,7 +112,7 @@
 
     <fragment
         android:id="@+id/nav_eventViewFragment"
-        android:name="com.donation.donationEvent.EventViewFragment"
+        android:name="com.donation.donation.DonationEvent.EventViewFragment"
         android:label="@string/menu_viewevent"
         tools:layout="@layout/fragment_event_view">
         <action
@@ -148,7 +130,7 @@
 
     <fragment
         android:id="@+id/addCentersFragment"
-        android:name="com.donation.donationEvent.AddCentersFragment"
+        android:name="com.donation.donation.DonationEvent.AddCentersFragment"
         android:label="@string/selectCenters"
         tools:layout="@layout/fragment_add_centers">
         <action
@@ -160,7 +142,7 @@
 
     <fragment
         android:id="@+id/eventconfirmation"
-        android:name="com.donation.donationEvent.EventConfirmation"
+        android:name="com.donation.donation.DonationEvent.EventConfirmation"
         android:label=""
         tools:layout="@layout/fragment_event_confirmation">
         <action
@@ -174,7 +156,7 @@
 
     <fragment
         android:id="@+id/donateToEvent"
-        android:name="com.donation.donationEvent.DonateToEvent"
+        android:name="com.donation.donation.DonationEvent.DonateToEvent"
         android:label=""
         tools:layout="@layout/fragment_donate_to_event">
         <argument
@@ -207,7 +189,7 @@
 
     <fragment
         android:id="@+id/userDonationsViewFragment"
-        android:name="com.donation.UserDonationViewFragment"
+        android:name="com.donation.donation.DonationView.UserDonationViewFragment"
         tools:layout="@layout/fragment_user_donation_view">
         <action
             android:id="@+id/action_userDonationViewFragment_to_donationDetailFragment"
@@ -216,7 +198,7 @@
 
     <fragment
         android:id="@+id/viewConfirmedDonationsFragment"
-        android:name="com.donation.ViewConfirmedDonationsFragment"
+        android:name="com.donation.donation.DonationView.ViewConfirmedDonationsFragment"
         android:label="fragment_view_confirmed_donations"
         tools:layout="@layout/fragment_view_confirmed_donations" />
 </navigation>

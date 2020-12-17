@@ -1,4 +1,4 @@
-package com.donation.donationEvent;
+package com.donation.donation.DonationEvent;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

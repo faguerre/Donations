@@ -15,7 +15,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_alignParentBottom="true"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:padding="10dp">
         <SearchView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,16 +29,12 @@
             android:elevation="5dp"
             android:background="@color/background">
         </SearchView>
-
         <Button
-            android:layout_marginTop="10dp"
             android:id="@+id/btn_confirmLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@color/background"
-            android:text="Confirmar"
-            android:elevation="5dp"></Button>
+            android:text="Confirmar" />
+
     </LinearLayout>
 
 </RelativeLayout>

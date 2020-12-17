@@ -1,4 +1,4 @@
-package com.donation.donationEvent;
+package com.donation.donation.DonationEvent;
 
 import android.Manifest;
 import android.content.pm.PackageManager;

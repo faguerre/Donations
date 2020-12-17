@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
@@ -116,6 +117,8 @@ public class LoginFragment extends DialogFragment {
         btnNewUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //navigation.navigate(R.id.nav_NewUser);
+                //navigation.popBackStack();
                 navigation.navigate(R.id.nav_NewUser);
             }
         });
@@ -132,7 +135,8 @@ public class LoginFragment extends DialogFragment {
                     String token = response.body().getToken();
                     tokenHandler.addToken(token);
                     loginDB.addUser(token, new UserModelIn(loginModelOut.getEmail()),"N");
-                    navigation.navigate(R.id.nav_homeFragment);
+                    //navigation.navigate(R.id.nav_homeFragment);
+                    navigation.popBackStack(R.id.nav_homeFragment, false);
                     donationGeoReferences = new DonationGeoReferences(getContext());
                     donationGeoReferences.generateList();
                 } else {
